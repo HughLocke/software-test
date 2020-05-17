@@ -71,9 +71,10 @@ public class DocumentController {
 				 */
 				String path = session.getServletContext().getRealPath("/upload/");
 				String filename = document.getFile().getOriginalFilename();
-				path = "C://Users//Rain//Documents//RainMe//JavaWed//";
+				path = "D://";
 				File tempFile = new File(path+File.separator+filename);
 				 tempFile.createNewFile();  
+				 .
 				 document.getFile().transferTo(tempFile);  
 				document.setFilename(filename);
 				rainservice.insert_DocumentInfo(document);

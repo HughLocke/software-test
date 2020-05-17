@@ -26,48 +26,48 @@
                             <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim="" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 90px;">
                                 <div carousel-item="">
                                     <ul class="layui-row layui-col-space10 layui-this">
-                                      <%--   <li class="layui-col-xs2">
-                                            <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>文章数</h3>
+                                         <li class="layui-col-xs2">
+                                            <a  href="${ctx }/user/list" class="x-admin-backlog-body">
+                                                <h3>用户数量</h3>
                                                 <p>
-                                                    <cite>66</cite></p>
+                                                    <cite>6</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
-                                            <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>会员数</h3>
+                                            <a href="${ctx }/dept/list" class="x-admin-backlog-body">
+                                                <h3>部门数量</h3>
                                                 <p>
                                                     <cite>12</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
-                                            <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>回复数</h3>
+                                            <a href="${ctx }/job/list" class="x-admin-backlog-body">
+                                                <h3>职位数量</h3>
                                                 <p>
-                                                    <cite>99</cite></p>
+                                                    <cite>19</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
-                                            <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>商品数</h3>
+                                            <a href="${ctx }/employee/list" class="x-admin-backlog-body">
+                                                <h3>员工数量</h3>
                                                 <p>
-                                                    <cite>67</cite></p>
+                                                    <cite>7</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
-                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                            <a href="${ctx }/notice/list" class="x-admin-backlog-body">
                                                 <h3>文章数</h3>
                                                 <p>
                                                     <cite>67</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
-                                            <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>文章数</h3>
+                                            <a href="${ctx }/document/list" class="x-admin-backlog-body">
+                                                <h3>公告数量</h3>
                                                 <p>
-                                                    <cite>6766</cite></p>
+                                                    <cite>2</cite></p>
                                             </a>
-                                        </li> --%>
+                                        </li> 
                                     </ul>
                                 </div>
                             </div>

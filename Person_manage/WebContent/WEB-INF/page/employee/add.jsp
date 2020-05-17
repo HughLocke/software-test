@@ -48,7 +48,7 @@
           </div>
           <div class="layui-form-item" >
               <label for="phone" class="layui-form-label">
-                  <span class="x-red">*</span>身份证号码
+                  <span class="x-red">*</span>薪资
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="card_id" name="card_id" required="" lay-verify="required"
@@ -93,7 +93,7 @@
           </div>
           <div class="layui-form-item">
               <label for="phone" class="layui-form-label">
-                  <span class="x-red">*</span>联系地址
+                  <span class="x-red">*</span>籍贯
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="address" name="address" required="" lay-verify="required"
@@ -143,7 +143,7 @@
           //自定义验证规则
           form.verify({
             nikename: function(value){
-              if(value.length < 5){
+              if(value.length < 5 || value.length > 20){
                 return '昵称至少得5个字符啊';
               }
             }

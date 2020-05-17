@@ -25,7 +25,7 @@
   <body>
     <div class="x-nav">
       <span class="layui-breadcrumb">
-        <a href="">首页</a>
+        <a href="${ctx}/welcome">首页</a>
         <a>
           <cite>职位信息</cite></a>
       </span>

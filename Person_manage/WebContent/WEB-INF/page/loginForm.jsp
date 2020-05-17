@@ -20,12 +20,13 @@
     <script type="text/javascript" src="${ctx}/public/js/xadmin.js"></script>
 
 </head>
-<body class="login-bg">
+<body class="login-bg"  >
     
-    <div class="login layui-anim layui-anim-up">
-        <div class="message">春田花花管理系统<-管理登录</div>
+    <div class="login layui-anim layui-anim-up" >
+        <div class="message">春田花花管理系统</div>
         <div id="darkbannerwrap"></div>
-        ${requestScope.message}
+        <div class = "check">${requestScope.message}</div>
+        
         <form method="post" class="layui-form" action="${ctx}/login">
             <input name="loginname" placeholder="用户名" value="${loginname }"  type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">

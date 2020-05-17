@@ -25,7 +25,7 @@
   <body>
     <div class="x-nav">
       <span class="layui-breadcrumb">
-        <a href="">首页</a>
+        <a href="${ctx}/welcome">首页</a>
         <a>
           <cite>用户信息</cite></a>
       </span>
@@ -40,6 +40,7 @@
           <input class="layui-input" placeholder="截止日" name="end" id="end"> -->
           <input type="text" name="content" style="width:50%;"  placeholder="请输入查找登陆名" autocomplete="off" class="layui-input">
           <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+        	
         </form>
       </div>
       <%-- <xblock>
@@ -176,6 +177,8 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();</script>
+      
+      
   </body>
 
 </html>

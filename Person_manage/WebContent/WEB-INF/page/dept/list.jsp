@@ -25,7 +25,7 @@
   <body>
     <div class="x-nav">
       <span class="layui-breadcrumb">
-        <a href="">首页</a>
+        <a href="${ctx}/welcome">首页</a>
         <a href="">演示</a>
         <a>
           <cite>导航元素</cite></a>
