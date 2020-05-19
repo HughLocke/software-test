@@ -130,7 +130,7 @@
                 </table>
             </div>
         </fieldset>
-        <blockquote class="layui-elem-quote layui-quote-nm">这里是底部。</blockquote>
+        <blockquote class="layui-elem-quote layui-quote-nm"></blockquote>
     </div>
         <script>
         var _hmt = _hmt || [];
