@@ -31,7 +31,7 @@
                   <span class="x-red">*</span>姓名
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="name" name="name" required="" lay-verify="required"
+                  <input type="text" id="name" name="name" placeholder="长度不得超过20个字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.name }">
               </div>
              
@@ -41,7 +41,7 @@
                   <span class="x-red">*</span>密码
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="password" name="password" required="" lay-verify="required"
+                  <input type="text" id="password" name="password" placeholder="长度不得超过20个字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.password }">
               </div>
              
@@ -69,7 +69,7 @@
                   <span class="x-red">*</span>学历
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="education" name="education" required="" lay-verify="required"
+                  <input type="text" id="education" name="education" placeholder="长度不得超过20个字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.education }">
               </div>
           </div>
@@ -78,7 +78,7 @@
                   <span class="x-red">*</span>邮箱
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="email" name="email" required="" lay-verify="required"
+                  <input type="text" id="email" name="email" placeholder="长度不得超过20个字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.email }">
               </div>
           </div>
@@ -87,7 +87,7 @@
                   <span class="x-red">*</span>手机
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="phone" name="phone" required="" lay-verify="required"
+                  <input type="text" id="phone" name="phone" placeholder="长度不得超过13个字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.phone }">
               </div>
           </div>
@@ -96,7 +96,7 @@
                   <span class="x-red">*</span>籍贯
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="address" name="address" required="" lay-verify="required"
+                  <input type="text" id="address" name="address" placeholder="长度不得超过20个字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.address }">
               </div>
           </div>
@@ -105,7 +105,7 @@
                   <span class="x-red">*</span>职位
               </label>
               <div class="layui-input-inline">
-                  <select id="job_id" name="job_id" class="valid" >
+                  <select id="job_id" name="job_id" class="valid"  placeholder="长度不得超过20个字符" >
                     <c:forEach items="${requestScope.job_list}" var="line" varStatus="stat">
                     <option value="${line.id}" <c:if test="${job.job_id == line.id }">selected</c:if>>${line.name}</option>
                     </c:forEach>
