@@ -20,6 +20,7 @@
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
   </head>
   
   <body>
@@ -58,7 +59,7 @@
           <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
               </label>
-              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit=""/>
+              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit="" />
                  
           </div>
       </form>

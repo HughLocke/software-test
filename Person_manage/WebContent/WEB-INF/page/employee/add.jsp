@@ -20,6 +20,59 @@
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    function check(){
+    	if(deptForm.name.value.length < 5 || deptForm.name.value.length > 11){
+    		alert("用户名不能小于5,且不能大于11");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.password.value.length < 5 || deptForm.password.value.length > 11){
+    		alert("密码不能小于5,且不能大于11");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.card_id.value.length == 0 || deptForm.card_id.value.length > 18){
+    		alert("薪资不能为0");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.sex.value.length != 1 && deptForm.sex.value.length != 2){
+    		alert("性别数字只能为12");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.education.value.length > 9){
+    		alert("学历长度不能超过9字符");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.address.value.length > 49){
+    		alert("籍贯长度不能超过49字符");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.phone.value.length > 11){
+    		alert("手机长度不能超过11字符");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.email.value.length > 50){
+    		alert("邮箱长度不能超过50字符");
+    		 window.location = "${ctx }/employee/add";
+    		 return false;
+    		
+    	}
+
+    }
+    </script>
   </head>
   
   <body>
@@ -31,7 +84,7 @@
                   <span class="x-red">*</span>姓名
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="name" name="name" placeholder="长度不得超过20个字符" required="" lay-verify="required"
+                  <input type="text" id="name" name="name" placeholder="姓名不得超过11个字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.name }">
               </div>
              
@@ -41,7 +94,7 @@
                   <span class="x-red">*</span>密码
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="password" name="password" placeholder="长度不得超过20个字符" required="" lay-verify="required"
+                  <input type="text" id="password" name="password" placeholder="密码不得超过20字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.password }">
               </div>
              
@@ -69,7 +122,7 @@
                   <span class="x-red">*</span>学历
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="education" name="education" placeholder="长度不得超过20个字符" required="" lay-verify="required"
+                  <input type="text" id="education" name="education" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.education }">
               </div>
           </div>
@@ -78,7 +131,7 @@
                   <span class="x-red">*</span>邮箱
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="email" name="email" placeholder="长度不得超过20个字符" required="" lay-verify="required"
+                  <input type="text" id="email" name="email" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.email }">
               </div>
           </div>
@@ -87,7 +140,7 @@
                   <span class="x-red">*</span>手机
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="phone" name="phone" placeholder="长度不得超过13个字符" required="" lay-verify="required"
+                  <input type="text" id="phone" name="phone" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.phone }">
               </div>
           </div>
@@ -96,7 +149,7 @@
                   <span class="x-red">*</span>籍贯
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="address" name="address" placeholder="长度不得超过20个字符" required="" lay-verify="required"
+                  <input type="text" id="address" name="address" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.address }">
               </div>
           </div>
@@ -105,7 +158,7 @@
                   <span class="x-red">*</span>职位
               </label>
               <div class="layui-input-inline">
-                  <select id="job_id" name="job_id" class="valid"  placeholder="长度不得超过20个字符" >
+                  <select id="job_id" name="job_id" class="valid" >
                     <c:forEach items="${requestScope.job_list}" var="line" varStatus="stat">
                     <option value="${line.id}" <c:if test="${job.job_id == line.id }">selected</c:if>>${line.name}</option>
                     </c:forEach>
@@ -129,12 +182,14 @@
           <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
               </label>
-              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit=""/>
+              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit="" onClick = "check()" />
                  
           </div>
       </form>
     </div>
+    
     <script>
+    
         layui.use(['form','layer'], function(){
             $ = layui.jquery;
           var form = layui.form
@@ -154,12 +209,13 @@
                 }
             }
           });
-
+		
           //监听提交
           form.on('submit(add)', function(data){
         	  
             console.log(data);
             //发异步，把数据提交给php
+           
             layer.alert("增加成功", {icon: 6},function () {
             	document.getElementById('deptForm').submit();
                 // 获得frame索引
@@ -170,6 +226,7 @@
             });
             return false;
           });
+		
           
           
         });

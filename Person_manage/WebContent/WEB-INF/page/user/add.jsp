@@ -20,9 +20,33 @@
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    function check(){
+    	if(deptForm.loginname.value.length > 11 || deptForm.loginname.value.length < 5  ){
+    		alert("登录名不能超过11字符,不能小于5字符");
+    		 window.location = "${ctx }/user/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.username.value.length >11 || deptForm.username.value.length < 5  ){
+    		alert("用户名不能超过11字符,不能小于5字符");
+    		 window.location = "${ctx }/user/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.password.value.length >11 || deptForm.password.value.length < 5 ){
+    		alert("密码不能超过11字符,不能小于5字符");
+    		 window.location = "${ctx }/user/add";
+    		 return false;
+    	}
+    	
+
+    }
+    </script>
   </head>
   
   <body>
+
     <div class="x-body">
         <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/user/add">
         <input type="hidden" name="id" id="id" value="${job.id }" >
@@ -31,7 +55,7 @@
                   <span class="x-red">*</span>登录名
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="loginname" name="loginname" required="" lay-verify="required"
+                  <input type="text" id="loginname" name="loginname" placeholder="登录名不能超过11字符,不能小于5字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.loginname }">
               </div>
              
@@ -41,7 +65,7 @@
                   <span class="x-red">*</span>用户名
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="username" name="username" required="" lay-verify="required"
+                  <input type="text" id="username" name="username" required=""  placeholder="用户名不能超过11字符,不能小于5字符" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.username }">
               </div>
              
@@ -51,7 +75,7 @@
                   <span class="x-red">*</span>密码
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="password" name="password" required="" lay-verify="required"
+                  <input type="text" id="password" name="password"  placeholder="密码不能超过11字符,不能小于5字符" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.password }">
               </div>
              
@@ -60,7 +84,7 @@
           <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
               </label>
-              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit=""/>
+              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit="" onClick = "check()" />
                  
           </div>
       </form>
