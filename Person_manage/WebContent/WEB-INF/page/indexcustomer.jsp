@@ -51,8 +51,8 @@
          
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe723;</i>
-                    <cite>部门管理</cite>
+                    <i class="iconfont">&#xe60a;</i>
+                    <cite>部门</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -67,8 +67,8 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe723;</i>
-                    <cite>职位管理</cite>
+                    <i class="iconfont">&#xe7bd;</i>
+                    <cite>职位</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -84,15 +84,15 @@
            
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe726;</i>
-                    <cite>员工管理</cite>
+                    <i class="iconfont">&#xe677;</i>
+                    <cite>员工</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
                     <li>
                         <a _href="${ctx }/employee/list">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>员工列表</cite>
+                            <cite>员工</cite>
                         </a>
                     </li >
                    
@@ -100,8 +100,8 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe6ce;</i>
-                    <cite>公告管理</cite>
+                    <i class="iconfont">&#xe650;</i>
+                    <cite>公告</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -118,7 +118,7 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe6b4;</i>
+                    <i class="iconfont">&#xe675;</i>
                     <cite>下载中心</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>

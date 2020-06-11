@@ -20,6 +20,23 @@
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    function check(){
+    	if(deptForm.title.value.length >50 ){
+    		alert("职位名称不能超过50字符");
+    		 window.location = "${ctx }/dept/add";
+    		 return false;
+    		
+    	}
+    	if(deptForm.remark.value.length >50){
+    		alert("详情不能超过50字符");
+    		 window.location = "${ctx }/dept/add";
+    		 return false;
+    	}
+    	
+
+    }
+    </script>
   </head>
   
   <body>
@@ -49,7 +66,7 @@
           <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
               </label>
-              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit=""/>
+              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit="" onClick="check()"/>
                  
           </div>
       </form>
